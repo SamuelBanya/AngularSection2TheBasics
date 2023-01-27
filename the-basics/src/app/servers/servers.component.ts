@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
 
-// NOTE: We changed 'templateUrl' to 'template' and defined our own in-line HTML file within the new 'template' key value:
 @Component({
+  // NOTE: The 'selector' tag works like an CSS selector where you can just add the '<app-servers>' tag throughout the application:
+  // PREVIOUS VERSION: (using normal tag syntax):
   selector: 'app-servers',
+  // PREVIOUS VERSION (using attribute syntax):
+  // selector: '[app-servers]',
+  // PREVIOUS VERSION (using class syntax): 
+  // selector: '.app-servers',
   template: `
     <app-server></app-server>
     <app-server></app-server>`,
