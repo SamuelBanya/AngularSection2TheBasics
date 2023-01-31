@@ -1,6 +1,20 @@
+* Initial Notes For Setting Up Projects
 One thing to keep in mind:
 - Always make sure you add 'bootstrap' to each subsequent project with the following steps:
 npm install --save bootstrap 
 
 Then, go to the 'angular.json' file, go to projects > architect > build > styles, and make sure the following line is added:
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+* Databinding Notes
+Typescript Code -> Template (HTML)
+
+--> Output Data:
+- String Interpolation ( {{ data }})
+- Property Binding ([property]="data")
+
+<-- React To (User) Events
+- Event Binding ((event)="expression")
+
+Combination Of Both:
+- Two-Way-Binding ([(ngModel)]="data")

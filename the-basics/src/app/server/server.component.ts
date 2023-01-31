@@ -5,5 +5,13 @@ import { Component } from "@angular/core";
     templateUrl: './server.component.html'
 })
 export class ServerComponent {
+    // NOTE:
+    // The inclusion of ': number' and ': string' is actually inferred automatically in Typescript:
+    serverId: number = 10;
+    serverStatus: string = 'Offline';
+
+    getServerStatus() {
+        return this.serverStatus;
+    }
 
 }
