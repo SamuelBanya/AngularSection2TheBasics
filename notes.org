@@ -27,9 +27,19 @@ Combination Of Both:
 - You have to add '[]' around the property itself to dynamically bind the property
 - Ex: You can add a '[disabled]' property to disable a button accordingly
 
+* Using String Interpolation
+- In order to use string interpolation, you have to use double curly braces, {{ }}, with the string inside of it:
+- Ex: {{ someVariable }}
+
 * Using 'innerText' Property For Data Binding
 - We can also use the 'innerText' property for data binding as well
 
 * When To Use Databinding Vs String Interpolation 
 - If you want to output some text in your HTML template, use string interpolation
 - If you want to change some HTML element's property, use databinding
+
+* How To Use Event Binding
+- Event binding in Angular is designated by using a pair of parentheses within the HTML element's attributes section
+- This allows you to bind to any HTML element events that are available like click events, mouse over events, etc
+- Ex:
+- (click)="onCreateServer()">

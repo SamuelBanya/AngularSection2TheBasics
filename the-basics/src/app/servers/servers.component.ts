@@ -19,6 +19,8 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowNewServer = false;
 
+  serverCreationStatus = 'No server was created!';
+
   // NOTE:
   // The 'constructor' is the function that is executed when the component is created in Angular:
   constructor() {
@@ -28,6 +30,11 @@ export class ServersComponent {
   }
 
   ngOnInit() {
+
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created';
 
   }
 
