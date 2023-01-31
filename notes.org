@@ -19,7 +19,6 @@ Typescript Code -> Template (HTML)
 Combination Of Both:
 - Two-Way-Binding ([(ngModel)]="data")
 
-
 * Notes On Constructor Functions 
 - The 'constructor' is the function that is executed when the component is created in Angular:
 
@@ -27,3 +26,10 @@ Combination Of Both:
 - We can bind to HTML properties of tags, like 'disabled', etc
 - You have to add '[]' around the property itself to dynamically bind the property
 - Ex: You can add a '[disabled]' property to disable a button accordingly
+
+* Using 'innerText' Property For Data Binding
+- We can also use the 'innerText' property for data binding as well
+
+* When To Use Databinding Vs String Interpolation 
+- If you want to output some text in your HTML template, use string interpolation
+- If you want to change some HTML element's property, use databinding

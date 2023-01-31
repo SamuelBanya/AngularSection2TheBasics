@@ -1,4 +1,7 @@
 <!-- NOTE: We are binding the 'disabled' property to be the opposite of the 'allowNewServer' boolean value: -->
 <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<p>String Interpolation Example: {{ allowNewServer }}</p>
+<!-- NOTE: We can bind to the 'innerText' property using data binding in this case -->
+<p [innerText]="allowNewServer">{{ allowNewServer }}</p>
 <app-server></app-server>
 <app-server></app-server>
