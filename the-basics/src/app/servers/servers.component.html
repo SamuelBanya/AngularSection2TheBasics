@@ -1,9 +1,17 @@
 <!-- NOTE: This is used so we can grab event data from the user's input: -->
 <label>Server Name</label>
+<!-- NOTE: Example of one-way databinding, commented out to show better 'Two-Way-Databinding' approach: -->
 <input 
     type="text" 
     class="form-control"
     (input)="onUpdateServerName($event)" 
+/>
+<!-- NOTE: This is an example of 'Two-Way-Databinding' that will trigger on the update event, and update the value of the component automatically  -->
+<!-- NOTE: It will also update the 'value' of the input element if we update 'serverName' somewhere else as well -->
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"
 />
 <p>{{ serverName }}</p>
 

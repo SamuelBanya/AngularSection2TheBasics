@@ -19,7 +19,9 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName = '';
+  // NOTE: This was for the previous one-way databinding example:
+  // serverName = '';
+  serverName = "TestServer";
 
   // NOTE:
   // The 'constructor' is the function that is executed when the component is created in Angular:
