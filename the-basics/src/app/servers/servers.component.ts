@@ -18,8 +18,8 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   allowNewServer = false;
-
   serverCreationStatus = 'No server was created!';
+  serverName = '';
 
   // NOTE:
   // The 'constructor' is the function that is executed when the component is created in Angular:
@@ -36,6 +36,13 @@ export class ServersComponent {
   onCreateServer() {
     this.serverCreationStatus = 'Server was created';
 
+  }
+
+  onUpdateServerName(event: Event) {
+    // NOTE:
+    // We need '<HTMLInputElement>' since this is a Typescript specific requirement via 'casting':
+    this.serverName = (<HTMLInputElement>event.target).value;
+    console.log("event: ", event);
   }
 
 }
