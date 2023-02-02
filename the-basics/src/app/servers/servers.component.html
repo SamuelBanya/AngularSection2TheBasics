@@ -13,7 +13,9 @@
     class="form-control"
     [(ngModel)]="serverName"
 />
-<p>{{ serverName }}</p>
+
+<!-- NOTE: This is commented out since we want the 'serverName' to be displayed once we click the related 'Add Server' button below: -->
+<!-- <p>{{ serverName }}</p> -->
 
 <!-- NOTE: We are binding the 'disabled' property to be the opposite of the 'allowNewServer' boolean value: -->
 <!-- NOTE: We are using event binding with the (click) event in this example as well:  -->
