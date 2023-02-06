@@ -7,4 +7,8 @@
 <!-- NOTE: You have two choices, you can either use dashes for the property name surrounded by single quotation marks -->
 <!-- <p [ngStyle]="{'background-color'}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p> -->
 <!-- NOTE: Or, you can use camelCase notation without the single quotes  -->
-<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
+<p 
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">
+    {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} 
+</p>

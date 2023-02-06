@@ -28,3 +28,26 @@
         return this.serverStatus === 'online' ? 'green' : 'red';
     }
 #+END_SRC
+
+* What Was Done In The '40. Applying CSS Classes Dynamically with ngClass' Lesson:
+- I modified the 'src/app/server/server.component.ts' file with the following 'styles' tag:
+#+BEGIN_SRC js 
+@Component({
+    selector: 'app-server',
+    templateUrl: './server.component.html',
+    styles: [`
+        .online {
+            color: white;
+        }
+    `]
+})
+#+END_SRC
+
+- I then had to use the 'ngClass' directive, but also used corresponding property binding within the 'src/app/server/server.component.html' file that checks to see if the 'serverStatus' variable is set to 'online':
+#+BEGIN_SRC html
+<p 
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">
+    {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} 
+</p>
+#+END_SRC
