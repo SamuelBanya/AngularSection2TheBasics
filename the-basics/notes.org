@@ -1,9 +1,30 @@
-* Directives 
+* Constructor
+- NOTE: I am pretty sure this was covered earlier, but it's good as a review
+- This is a function that basically is called upon creation of an Angular component
 
+* Directives 
+** 'ngIf' Directive
 '*ngIf':
 - These are in-built directives that allow you change the appearance or behavior of DOM elements and Angular components 
 - Related Docs page: 
 - https://angular.io/guide/attribute-directives
 - For '*ngIf': the '*' is required since it is a structural directive that changes the structure of the DOM of the page, ex: It either adds or doesn't add the element that '*ngIf' is attached to
 
+** '<ng-template>' Directive
 '<ng-template>': This is a directive that is native to Angular which allows you to mark places in the DOM
+
+** Attribute Directive
+- In the example for this lesson, we binded to the 'ngStyle' directive
+- However, we want to bind to a property on the directive called 'ngStyle'
+
+* What Was Done in The '39. Styling Elements Dynamically with ngStyle' Lesson:
+- We added the following in the 'src/app/server/server.component.html' file:
+#+BEGIN_SRC html 
+<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
+#+END_SRC
+- I then added the corresponding 'getColor' function within the 'src/app/server/server.component.ts' file to return a ternary expression accordingly:
+#+BEGIN_SRC js
+    getColor() {
+        return this.serverStatus === 'online' ? 'green' : 'red';
+    }
+#+END_SRC

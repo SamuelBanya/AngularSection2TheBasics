@@ -1,2 +1,10 @@
 <p>The Server Component</p>
-<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
+<!-- NOTE: -->
+<!-- In the example for this lesson, we binded to the 'ngStyle' directive -->
+<!-- However, we want to bind to a property on the directive called 'ngStyle' -->
+
+<!-- NOTE: We are providing a JavaScript object for the value of the 'ngStyle' property -->
+<!-- NOTE: You have two choices, you can either use dashes for the property name surrounded by single quotation marks -->
+<!-- <p [ngStyle]="{'background-color'}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p> -->
+<!-- NOTE: Or, you can use camelCase notation without the single quotes  -->
+<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
