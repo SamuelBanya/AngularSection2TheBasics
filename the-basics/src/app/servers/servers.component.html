@@ -26,9 +26,13 @@
         Add Server
 </button>
 <p>String Interpolation Example: {{ allowNewServer }}</p>
+<!-- NOTE: Commenting out since we are using '*ngIf' with a related variable from the Server component instead below: -->
+<!-- Outputting the value of a property: -->
+<!-- <p>{{ serverCreationStatus }}</p> -->
 <!-- NOTE: We can bind to the 'innerText' property using data binding in this case -->
 <p [innerText]="allowNewServer">{{ allowNewServer }}</p>
-<!-- Outputting the value of a property: -->
-<p>{{ serverCreationStatus }}</p>
+
+<!-- Example of using a 'directive', speciifically the 'ngIf' directive -->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 <app-server></app-server>
 <app-server></app-server>

@@ -22,6 +22,7 @@ export class ServersComponent {
   // NOTE: This was for the previous one-way databinding example:
   // serverName = '';
   serverName = "TestServer";
+  serverCreated = false;
 
   // NOTE:
   // The 'constructor' is the function that is executed when the component is created in Angular:
@@ -36,6 +37,8 @@ export class ServersComponent {
   }
 
   onCreateServer() {
+    // NOTE: We are setting 'serverCreated' to true for later use with the '*ngIf' directive:
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
 
   }
