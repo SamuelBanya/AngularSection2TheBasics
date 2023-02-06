@@ -33,6 +33,10 @@
 <p [innerText]="allowNewServer">{{ allowNewServer }}</p>
 
 <!-- Example of using a 'directive', speciifically the 'ngIf' directive -->
-<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+<h3>Using ngIf with its corresponding 'else' block: </h3>
+<p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>

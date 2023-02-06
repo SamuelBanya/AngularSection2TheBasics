@@ -1,5 +1,9 @@
 * Directives 
+
+'*ngIf':
 - These are in-built directives that allow you change the appearance or behavior of DOM elements and Angular components 
 - Related Docs page: 
 - https://angular.io/guide/attribute-directives
 - For '*ngIf': the '*' is required since it is a structural directive that changes the structure of the DOM of the page, ex: It either adds or doesn't add the element that '*ngIf' is attached to
+
+'<ng-template>': This is a directive that is native to Angular which allows you to mark places in the DOM
