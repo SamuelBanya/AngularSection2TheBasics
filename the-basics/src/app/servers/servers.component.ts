@@ -23,6 +23,7 @@ export class ServersComponent {
   // serverName = '';
   serverName = "TestServer";
   serverCreated = false;
+  servers = ['TestServer', 'TestServer 2'];
 
   // NOTE:
   // The 'constructor' is the function that is executed when the component is created in Angular:
@@ -39,6 +40,7 @@ export class ServersComponent {
   onCreateServer() {
     // NOTE: We are setting 'serverCreated' to true for later use with the '*ngIf' directive:
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
 
   }

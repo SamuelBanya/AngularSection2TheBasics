@@ -51,3 +51,24 @@
     {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} 
 </p>
 #+END_SRC
+
+* How To Use The 'ngFor' Directive To Loop Through To Add Components To A Page 
+- You can use the 'ngFor' directive to loop through and add components:
+- Within the 'servers.component.ts' file, I added a new array:
+#+BEGIN_SRC js
+export class ServersComponent {
+  allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
+  // NOTE: This was for the previous one-way databinding example:
+  // serverName = '';
+  serverName = "TestServer";
+  serverCreated = false;
+  servers = ['TestServer', 'TestServer 2'];
+#+END_SRC
+- I then used .push in the same 'servers.component.ts' file within the 'onCreateServer' function:
+#+BEGIN_SRC js
+  onCreateServer() {
+    // NOTE: We are setting 'serverCreated' to true for later use with the '*ngIf' directive:
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
+#+END_SRC

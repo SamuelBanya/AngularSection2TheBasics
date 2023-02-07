@@ -38,5 +38,8 @@
 <ng-template #noServer>
     <p>No server was created!</p>
 </ng-template>
-<app-server></app-server>
-<app-server></app-server>
+<!-- PREVIOUS VERSION WITHOUT 'ngFor' DIRECTIVE: -->
+<!-- <app-server></app-server> -->
+<!-- <app-server></app-server> -->
+<!-- NOTE: We are using a '*' here since it is a structural directive that is changing the DOM itself, which will loop through each of the 'servers' array: -->
+<app-server *ngFor="let server of servers"></app-server>
